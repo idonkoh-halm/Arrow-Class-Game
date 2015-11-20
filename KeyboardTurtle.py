@@ -1,3 +1,4 @@
+#Original Code  from http://openbookproject.net/thinkcs/python/english3e/events.html
 import turtle
 
 turtle.setup(400,500)                # Determine the window size
