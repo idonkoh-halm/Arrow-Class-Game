@@ -3,7 +3,6 @@ import turtle
 
 
 wn = turtle.Screen()
-wn.title("Handling keypresses!")
 wn.bgcolor("darkgoldenrod")
 oliver = turtle.Turtle()
 
