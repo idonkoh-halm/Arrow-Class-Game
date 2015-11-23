@@ -22,6 +22,7 @@ wn.onkey(h1, "Up")
 wn.onkey(h2, "Left")
 wn.onkey(h3, "Down")
 wn.onkey(h4, "right")
+turtle.onclick(turtle.forward(70))
 
 
 wn.listen()
