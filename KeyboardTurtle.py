@@ -3,7 +3,6 @@ import turtle
 
 
 wn = turtle.Screen()
-wn.bgcolor("darkgoldenrod")
 oliver = turtle.Turtle()
 
 
@@ -16,12 +15,13 @@ def h3():
    oliver.setheading(-60)
 def h4():
     oliver.circle(45,5)
-
+def screenClicked (x,y):
+    oliver.goto(x,y)
 wn.onkey(h1, "Up")
 wn.onkey(h2, "Left")
 wn.onkey(h3, "Down")
-wn.onkey(h4, "right")
-turtle.onclick(turtle.forward(70))
+wn.onkey(h4, "Right")
+
 
 
 wn.listen()
