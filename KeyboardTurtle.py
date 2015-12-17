@@ -8,10 +8,19 @@ class Arrow (turtle.Turtle):
 
     def reset_direction (self):
         self.setheading(60)
+    def reset_direction_again (self):
+        self.setheading(-60)
     def thrusters(self):
         self.forward(50)
     def move(self):
         pass
+    def reset(self):
+        self.up()
+        self.goto(0,0)
+        oliver.down()
+        a=["Red","Blue"]
+        colorvalue=random.randint(0,2)
+        self.color(a[colorvalue])
 oliver = Arrow()
 
 laura = Arrow()
@@ -19,25 +28,7 @@ laura = Arrow()
 wn = turtle.Screen()
 #oliver = turtle.Turtle()
 
-def h1():
-    oliver.setheading(50)
 
-def h2():
-    oliver.circle(45,5)
-
-def h3():
-    oliver.setheading(-60)
-
-def h4():
-    oliver.circle(-45,5)
-
-def Return_to_Origin():
-    oliver.up()
-    oliver.goto(0,0)
-    oliver.down()
-    b = ["Red", "Blue", "Green"]
-    colorvalue=random.randint(0,2)
-    oliver.color(b[colorvalue])
 
 def screenClicked(x,y):
     a = ["Red","Blue","Green", "Medium Blue", "Lime Green", "DodgerBlue", "Dark Blue"]
@@ -47,14 +38,18 @@ def screenClicked(x,y):
     laura.color(b[colorvalue])
 
 
+
+
 wn.onkey(oliver.reset_direction, 'Up')
-wn.onkey(laura.reset_direction,'a')
-wn.onkey(h1, "Up")
-wn.onkey(h2, "Left")
-wn.onkey(h3, "Down")
+wn.onkey(laura.reset_direction,'W')
+wn.onkey(oliver.reset_direction_again, "Down")
+wn.onkey(laura.reset_direction_again, "s")
+wn.onkey(h3, "Left")
 wn.onkey(h4, "Right")
+wn.onkey(h3, "a")#for laura
+wn.onkey(h4, "d")#for laura
 wn.onkey(oliver.thrusters, "Up")
 wn.onkey(laura.thrusters, "f")
-wn.onkey(Return_to_Origin, "0")
+wn.onkey(oliver.reset, "0")
 wn.onclick(screenClicked)        
 wn.listen()
